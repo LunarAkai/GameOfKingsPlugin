@@ -1,0 +1,37 @@
+cardtypings:
+  aqua: "Wasser"
+  beast: "Ungeheuer"
+  dragon: "Drache"
+  beastwarrior: "Ungehauer-Krieger"
+  cyberse: "Cyberse"
+  dinosaur: "Dinosaurier"
+  divinebeast: "Göttliches-Ungeheuer"
+  fairy: "Fee"
+  fiend: "Unterweltler"
+  fish: "Fisch"
+  insect: "Insekt"
+  machine: "Maschine"
+  plant: "Pflanze"
+  psychic: "Psy"
+  pyro: "Pyro"
+  reptile: "Reptil"
+  rock: "Gestein"
+  seaSerpent: "Seeungeheuer"
+  spellcaster: "Magier"
+  thunder: "Donner"
+  warrior: "Krieger"
+  wingedBeast: "Geflügeltes-Ungeheuer"
+  wyrm: "Wyrm"
+  zombie: "Zombie"
+cards:
+  lob:
+    lob001:
+      name: "Blauäugiger Weißer Drache"
+      desc: "Dieser legendäre Drache ist eine mächtige Zerstörungsmaschine. Er ist buchstäblich unbesiegbar, nur wenige haben diese Furcht einflößende Kreatur gesehen und lange genug gelebt, um davon zu berichten."
+    lob119:
+      name: "Topf der Gier"
+      desc: "Ziehe 2 Karten."
+    lob124:
+      name: "Exodia, die Verbotene"
+      desc: "Falls du zusätzlich zu dieser Karte „Rechtes Bein der Verbotenen“, „Linkes Bein der Verbotenen“, „Rechter Arm der Verbotenen“ und „Linker Arm der Verbotenen“ in deiner Hand hast, gewinnst du das Duell."
+

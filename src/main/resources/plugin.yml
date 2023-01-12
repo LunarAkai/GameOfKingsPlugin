@@ -1,0 +1,11 @@
+name: Yugioh
+version: '${project.version}'
+main: de.lunarakai.yugioh.Yugioh
+api-version: 1.19
+prefix: YGO
+authors: [ LunarAkai ]
+website: lunarakai.de
+commands:
+  yugioh:
+    aliases: ygo
+    description: Yugioh Command
