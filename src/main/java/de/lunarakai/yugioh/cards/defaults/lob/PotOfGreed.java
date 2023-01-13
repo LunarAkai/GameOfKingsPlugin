@@ -13,9 +13,17 @@ import java.io.UnsupportedEncodingException;
 
 public class PotOfGreed extends SpellCard {
 
-    public PotOfGreed() throws UnsupportedEncodingException {
-        super(new NamespacedKey(Yugioh.getPlugin(), "lob" + "-" + "119"));
+    String boosterKey;
+    String cardKey;
+
+
+    public PotOfGreed(String keyBooster, String keyCard) throws UnsupportedEncodingException {
+        super(new NamespacedKey(Yugioh.getPlugin(), keyBooster + "-" + keyCard));
+
+        this.boosterKey = keyBooster;
+        this.cardKey = keyCard;
     }
+
 
     @Override
     protected ItemStack createItemStack() throws UnsupportedEncodingException {
@@ -24,8 +32,8 @@ public class PotOfGreed extends SpellCard {
         meta = setSpellCardMeta(
                 meta,
                 SpellCardTypes.NORMAL,
-                LangUtil.getLocalizedCardName("lob", "119"),
-                LangUtil.getLocalizedCardText("lob", "119")
+                LangUtil.getLocalizedCardName(boosterKey, cardKey),
+                LangUtil.getLocalizedCardText(boosterKey, cardKey)
         );
         stack.setItemMeta(meta);
 

@@ -14,8 +14,13 @@ import java.util.Map;
 
 public class LegendOfTheBlueEyesWhiteDragon extends AbstractBoosterPack
 {
-    public LegendOfTheBlueEyesWhiteDragon() {
-        super(new NamespacedKey(Yugioh.getPlugin(), "lob"));
+
+    String key;
+
+    public LegendOfTheBlueEyesWhiteDragon(String boosterKey) {
+        super(new NamespacedKey(Yugioh.getPlugin(), boosterKey));
+
+        this.key = boosterKey;
     }
 
     Map<AbstractCard, Rarity> cardList = new HashMap<>();
@@ -28,6 +33,11 @@ public class LegendOfTheBlueEyesWhiteDragon extends AbstractBoosterPack
     @Override
     public Map<AbstractCard, Rarity> getCardList() {
         return cardList;
+    }
+
+    @Override
+    public String getBoosterPackKey() {
+        return key;
     }
 
     @Override

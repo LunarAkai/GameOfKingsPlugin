@@ -13,8 +13,18 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.io.UnsupportedEncodingException;
 
 public class BlueEyesWhiteDragon extends MonsterCard {
-    public BlueEyesWhiteDragon() throws UnsupportedEncodingException {
-        super(new NamespacedKey(Yugioh.getPlugin(), "lob" + "-" + "001"));
+
+    String boosterKey;
+    String cardKey;
+
+    public BlueEyesWhiteDragon(String keyBooster, String keyCard) throws UnsupportedEncodingException {
+        super(new NamespacedKey(Yugioh.getPlugin(), keyBooster + "-" + keyCard));
+
+        Yugioh.LOGGER.info("KeyBooster: " + keyBooster + ", KeyCard: " + keyCard);
+
+        this.boosterKey = keyBooster;
+        this.cardKey = keyCard;
+
     }
 
     @Override
@@ -29,8 +39,8 @@ public class BlueEyesWhiteDragon extends MonsterCard {
                 false,
                 3000,
                 2500,
-                LangUtil.getLocalizedCardName("lob", "001"),
-                LangUtil.getLocalizedCardText("lob", "001")
+                LangUtil.getLocalizedCardName(boosterKey, cardKey),
+                LangUtil.getLocalizedCardText(boosterKey, cardKey)
         );
         stack.setItemMeta(meta);
 

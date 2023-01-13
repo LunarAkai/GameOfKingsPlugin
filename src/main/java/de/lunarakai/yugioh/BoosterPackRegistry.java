@@ -2,7 +2,6 @@ package de.lunarakai.yugioh;
 
 import com.google.common.base.Preconditions;
 import de.lunarakai.yugioh.cards.AbstractBoosterPack;
-import de.lunarakai.yugioh.cards.AbstractCard;
 import org.bukkit.NamespacedKey;
 
 import java.util.HashMap;

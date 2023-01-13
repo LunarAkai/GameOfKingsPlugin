@@ -34,17 +34,18 @@ public final class Yugioh extends JavaPlugin {
         saveLangConfig(langName);
         this.saveDefaultConfig();
         this.saveLangDefaultConfig();
-
-        this.cardRegistry = new CardRegistry(this);
         this.boosterPackRegistry = new BoosterPackRegistry(this);
+        new BoosterPackRegistration(this).registerBoosterPacks();
 
         new CommandRegistration(this).registerCommands();
+
+        this.cardRegistry = new CardRegistry(this);
         try {
             new CardRegistration(this).registerCards();
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }
-        new BoosterPackRegistration(this).registerBoosterPacks();
+
 
         getLogger().info("Plugin loaded successfully!");
     }

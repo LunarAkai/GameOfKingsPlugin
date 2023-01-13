@@ -23,6 +23,7 @@ public abstract class MonsterCard extends AbstractCard{
 
     protected ItemMeta setMonsterCardMeta(ItemMeta cardMeta, int level, Attributes attribute,
                                           CardTyping typing, Boolean isEffect, int atk, int def, String cardName, String... cardText) throws UnsupportedEncodingException {
+
         TextComponent textNameComponent = Component.text(cardName)
                 .color(NamedTextColor.WHITE).decoration(TextDecoration.BOLD, true);
         cardMeta.displayName(textNameComponent);

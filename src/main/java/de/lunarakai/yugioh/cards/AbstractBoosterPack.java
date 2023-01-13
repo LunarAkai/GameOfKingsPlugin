@@ -30,6 +30,8 @@ public abstract class AbstractBoosterPack implements Keyed {
         this.itemStack = initItemStack(Objects.requireNonNull(createItemStack(), "ItemStack must not be null"));
     }
 
+    public abstract String getBoosterPackKey();
+
     protected abstract ItemStack createItemStack();
 
     public abstract void addToCardList(AbstractCard card, Rarity rarity);
