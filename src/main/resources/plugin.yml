@@ -1,11 +1,11 @@
-name: Yugioh
+name: GameOfKings
 version: '${project.version}'
-main: de.lunarakai.yugioh.Yugioh
+main: de.lunarakai.yugioh.GameOfKings
 api-version: 1.19
 prefix: YGO
 authors: [ LunarAkai ]
 website: lunarakai.de
 commands:
   yugioh:
-    aliases: ygo
-    description: Yugioh Command
+    aliases: gok
+    description: GameOfKings Command

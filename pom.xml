@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.lunarakai</groupId>
-    <artifactId>yugioh</artifactId>
+    <artifactId>gameofkings</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
 
-    <name>Yugioh</name>
+    <name>GameOfKings</name>
 
     <properties>
         <java.version>1.8</java.version>
