@@ -3,6 +3,7 @@ package de.lunarakai.yugioh.cards.defaults.lob;
 import de.lunarakai.yugioh.Yugioh;
 import de.lunarakai.yugioh.cards.MonsterCard;
 import de.lunarakai.yugioh.utils.Attributes;
+import de.lunarakai.yugioh.utils.CardTyping;
 import de.lunarakai.yugioh.utils.LangUtil;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -24,7 +25,8 @@ public class BlueEyesWhiteDragon extends MonsterCard {
                 meta,
                 8,
                 Attributes.LIGHT,
-                "Dragon",
+                CardTyping.DRAGON,
+                false,
                 3000,
                 2500,
                 LangUtil.getLocalizedCardName("lob", "001"),

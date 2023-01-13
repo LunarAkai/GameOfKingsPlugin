@@ -1,11 +1,11 @@
 cardtypings:
   aqua: "Wasser"
   beast: "Ungeheuer"
-  dragon: "Drache"
   beastwarrior: "Ungehauer-Krieger"
   cyberse: "Cyberse"
   dinosaur: "Dinosaurier"
   divinebeast: "Göttliches-Ungeheuer"
+  dragon: "Drache"
   fairy: "Fee"
   fiend: "Unterweltler"
   fish: "Fisch"
@@ -16,13 +16,23 @@ cardtypings:
   pyro: "Pyro"
   reptile: "Reptil"
   rock: "Gestein"
-  seaSerpent: "Seeungeheuer"
+  seaserpent: "Seeungeheuer"
   spellcaster: "Magier"
   thunder: "Donner"
   warrior: "Krieger"
-  wingedBeast: "Geflügeltes-Ungeheuer"
+  wingedbeast: "Geflügeltes-Ungeheuer"
   wyrm: "Wyrm"
   zombie: "Zombie"
+attributes:
+  light: "Licht"
+  dark: "Dunkelheit"
+  fire: "Feuer"
+  earth: "Erde"
+  water: "Wasser"
+  wind: "Wind"
+  divine: "Göttlich"
+effect:
+  effect: "Effekt"
 cards:
   lob:
     lob001:

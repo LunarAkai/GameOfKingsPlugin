@@ -7,9 +7,9 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.util.Objects;
+import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -28,14 +28,12 @@ public final class Yugioh extends JavaPlugin {
     public void onEnable() {
         LOGGER = getLogger();
         plugin = this;
-        langName = plugin.getConfig().getString("active-language");
 
         loadConfig();
+        langName = plugin.getConfig().getString("active-language");
         saveLangConfig(langName);
         this.saveDefaultConfig();
         this.saveLangDefaultConfig();
-
-        langConfig = loadLangConfig(langName);
 
         this.cardRegistry = new CardRegistry(this);
         this.boosterPackRegistry = new BoosterPackRegistry(this);
@@ -74,12 +72,6 @@ public final class Yugioh extends JavaPlugin {
         saveConfig();
     }
 
-    public FileConfiguration loadLangConfig(String langName) {
-        FileConfiguration cfg = YamlConfiguration.loadConfiguration(new File(langName + ".yml"));
-        cfg.options().copyDefaults(true);
-        return cfg;
-    }
-
     public FileConfiguration getLangConfig() throws UnsupportedEncodingException {
         if (langConfig == null) {
             reloadLangConfig();
@@ -91,12 +83,10 @@ public final class Yugioh extends JavaPlugin {
         if (activeLangFile == null) {
             activeLangFile = new File(getDataFolder(), langName + ".yml");
         }
+        if (!activeLangFile.exists()) {
+            plugin.saveResource(langName+".yml", false);
+        }
         langConfig = YamlConfiguration.loadConfiguration(activeLangFile);
-
-        // Look for defaults in the jar
-        Reader defConfigStream = new InputStreamReader(Objects.requireNonNull(this.getResource(langName + ".yml")), StandardCharsets.UTF_8);
-        YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
-        langConfig.setDefaults(defConfig);
     }
 
     public void saveLangConfig(String langName) {

@@ -3,6 +3,7 @@ package de.lunarakai.yugioh.cards.defaults.lob;
 import de.lunarakai.yugioh.Yugioh;
 import de.lunarakai.yugioh.cards.EffectMonster;
 import de.lunarakai.yugioh.utils.Attributes;
+import de.lunarakai.yugioh.utils.CardTyping;
 import de.lunarakai.yugioh.utils.LangUtil;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -25,7 +26,8 @@ public class ExodiaTheForbiddenOne extends EffectMonster {
                 meta,
                 3,
                 Attributes.DARK,
-                "Spellcaster/Effect",
+                CardTyping.SPELLCASTER,
+                true,
                 1000,
                 1000,
                 LangUtil.getLocalizedCardName("lob", "124"),

@@ -1,30 +1,28 @@
 package de.lunarakai.yugioh.utils;
 
 public enum CardTyping {
-
-    SPELLCASTER("Spellcaster"),
-    AQUA("Aqua"),
-    Beast("Beast"),
-    BEASTWARRIOR("Beast-Warrior"),
-    CYBERSE("Cyberse"),
-    DINOSAUR("Dinosaur"),
-    DIVINEBEAST("Divine-Beast"),
-    DRAGON("Dragon"),
-    FAIRY("Fairy"),
-    FIEND("Fiend"),
-    FISH("Fish");
-
-
-
-
-    private final String cardTyping;
-
-
-    CardTyping(String cardTyping) {
-        this.cardTyping = cardTyping;
-    }
-
-    public String getTyping() {
-        return cardTyping;
-    }
+    AQUA,
+    BEAST,
+    BEASTWARRIOR,
+    CYBERSE,
+    DINOSAUR,
+    DIVINEBEAST,
+    DRAGON,
+    FAIRY,
+    FIEND,
+    FISH,
+    INSECT,
+    MACHINE,
+    PLANT,
+    PSYCHIC,
+    PYRO,
+    REPTILE,
+    ROCK,
+    SEASERPENT,
+    SPELLCASTER,
+    THUNDER,
+    WARRIOR,
+    WINGEDBEAST,
+    WYRM,
+    ZOMBIE
 }
