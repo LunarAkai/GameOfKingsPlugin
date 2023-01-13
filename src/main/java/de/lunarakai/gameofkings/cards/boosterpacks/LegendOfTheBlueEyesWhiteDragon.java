@@ -14,7 +14,6 @@ import java.util.Map;
 
 public class LegendOfTheBlueEyesWhiteDragon extends AbstractBoosterPack
 {
-
     String key;
 
     public LegendOfTheBlueEyesWhiteDragon(String boosterKey) {

@@ -11,15 +11,11 @@ import java.io.UnsupportedEncodingException;
 
 public class PotOfGreed extends SpellCard {
 
-    String boosterKey;
-    String cardKey;
+
 
 
     public PotOfGreed(String keyBooster, String keyCard) throws UnsupportedEncodingException {
         super(keyBooster, keyCard);
-
-        this.boosterKey = keyBooster;
-        this.cardKey = keyCard;
     }
 
 
@@ -30,8 +26,8 @@ public class PotOfGreed extends SpellCard {
         meta = setSpellCardMeta(
                 meta,
                 SpellCardTypes.NORMAL,
-                LangUtil.getLocalizedCardName(boosterKey, cardKey),
-                LangUtil.getLocalizedCardText(boosterKey, cardKey)
+                LangUtil.getLocalizedCardName(getBoosterKey(), getCardKey()),
+                LangUtil.getLocalizedCardText(getBoosterKey(), getCardKey())
         );
         stack.setItemMeta(meta);
 

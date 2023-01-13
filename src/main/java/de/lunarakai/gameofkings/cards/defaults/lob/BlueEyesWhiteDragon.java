@@ -12,8 +12,6 @@ import java.io.UnsupportedEncodingException;
 
 public class BlueEyesWhiteDragon extends MonsterCard {
 
-    String boosterKey;
-    String cardKey;
 
     public BlueEyesWhiteDragon(String keyBooster, String keyCard) throws UnsupportedEncodingException {
         super(keyBooster, keyCard);
@@ -31,8 +29,8 @@ public class BlueEyesWhiteDragon extends MonsterCard {
                 false,
                 3000,
                 2500,
-                LangUtil.getLocalizedCardName(boosterKey, cardKey),
-                LangUtil.getLocalizedCardText(boosterKey, cardKey)
+                LangUtil.getLocalizedCardName(getBoosterKey(), getCardKey()),
+                LangUtil.getLocalizedCardText(getBoosterKey(), getCardKey())
         );
         stack.setItemMeta(meta);
 

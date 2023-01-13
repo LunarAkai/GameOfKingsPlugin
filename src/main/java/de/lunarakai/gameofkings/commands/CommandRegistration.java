@@ -5,9 +5,9 @@ import de.lunarakai.gameofkings.GameOfKings;
 
 public record CommandRegistration(GameOfKings plugin) {
     public void registerCommands() {
-        CommandRouter ygoRouter = new CommandRouter(plugin.getCommand("yugioh"));
-        ygoRouter.addCommandMapping(new CommandYgo(plugin));
-        ygoRouter.addCommandMapping(new CommandYgoGive(plugin), "give");
+        CommandRouter gokRouter = new CommandRouter(plugin.getCommand("gameofkings"));
+        gokRouter.addCommandMapping(new CommandYgo(plugin));
+        gokRouter.addCommandMapping(new CommandYgoGive(plugin), "give");
         //ygoRouter.addCommandMapping(new CommandAdminGetCardInfo(plugin), "getinfo");
 
     }

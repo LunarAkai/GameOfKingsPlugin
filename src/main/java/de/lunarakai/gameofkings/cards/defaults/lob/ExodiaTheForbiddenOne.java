@@ -12,15 +12,8 @@ import java.io.UnsupportedEncodingException;
 
 public class ExodiaTheForbiddenOne extends EffectMonster {
 
-    String boosterKey;
-    String cardKey;
-
-
     public ExodiaTheForbiddenOne(String keyBooster, String keyCard) throws UnsupportedEncodingException {
         super(keyBooster, keyCard);
-
-        this.boosterKey = keyBooster;
-        this.cardKey = keyCard;
     }
 
     @Override
@@ -35,8 +28,8 @@ public class ExodiaTheForbiddenOne extends EffectMonster {
                 true,
                 1000,
                 1000,
-                LangUtil.getLocalizedCardName(boosterKey, cardKey),
-                LangUtil.getLocalizedCardText(boosterKey, cardKey)
+                LangUtil.getLocalizedCardName(getBoosterKey(), getCardKey()),
+                LangUtil.getLocalizedCardText(getBoosterKey(), getCardKey())
         );
         stack.setItemMeta(meta);
 
